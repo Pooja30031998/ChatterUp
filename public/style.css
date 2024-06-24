@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: centre; */
+  /* display: grid;
+  place-items: center; */
+  background-color: #ebebeb;
+  /* height: 100px; */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Adjust alignment as needed */
+  width: 100vw;
+}
+
+.main {
+  /* border: 5px solid #212020; */
+  padding: 5px;
+  border-radius: 24px 0px 24px 24px;
+  overflow: hidden;
+  width: 100%;
+  margin: 1%;
+  margin-left: 0px;
+}
+
+.name {
+  display: flex;
+  padding: 8px 16px;
+  background-color: #ebebeb;
+}
+
+#welcome {
+  color: rgb(5, 179, 5);
+  font-weight: 700;
+}
+
+#feedback {
+  font-style: italic;
+  color: #2d2d2d;
+}
+
+.message-conatiner {
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+  /* width: 400px;
+  height: 600px;
+  overflow-y: scroll;
+  overflow-x: hidden; */
+}
+
+.message-left {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 12px;
+  margin: 10px;
+  max-width: 70%;
+  font-size: 17px;
+  border-radius: 20px 20px 20px 0px;
+  align-self: flex-start;
+  background-color: #fff;
+  box-shadow: -2px 2px 4px #dcdcdc;
+}
+
+.message-right {
+  list-style: none;
+  display: flex;
+  flex-flow: row-reverse;
+  padding: 8px 12px;
+  margin: 10px;
+  max-width: 70%;
+  font-size: 17px;
+  border-radius: 20px 20px 0px 20px;
+  align-self: flex-end;
+  background-color: #589ffb;
+  box-shadow: 2px 2px 4px #dcdcdc;
+  color: #f6f6f6;
+}
+
+.imgOfLeftUser {
+  width: 50px;
+  display: inline-block;
+  align-self: flex-start;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.imgOfRightUser {
+  width: 50px;
+  display: inline-block;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid blue;
+}
+
+.divOfLeftUser,
+.divOfRightUser {
+  display: inline-block;
+  word-wrap: break-word;
+  max-width: 90%;
+}
+
+#username {
+  font-size: medium;
+  font-weight: 700;
+}
+
+#time {
+  font-style: italic;
+  display: block;
+  font-size: 10px;
+  margin-top: 4px;
+}
+
+.online-clients {
+  border: 2px solid #dddddd;
+  border-radius: 0 20px 0px 20px;
+  overflow: hidden;
+  /* padding: 8px; */
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 3%;
+  /* display: flex; */
+}
+
+.room-online {
+  color: rgb(5, 179, 5);
+}
+
+/* Join Page */
+.join-container {
+  max-width: 500px;
+  margin: 80px auto;
+  color: #fff;
+  background-color: #589ffb;
+}
+
+.join-header {
+  text-align: center;
+  padding: 20px;
+  background: var(--dark-color-a);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: blue;
+}
+
+.join-main {
+  padding: 30px 40px;
+  background: var(--dark-color-b);
+}
+
+.join-main p {
+  margin-bottom: 20px;
+}
+
+.join-main .form-control {
+  margin-bottom: 20px;
+  background-color: #589ffb;
+  border: 0px;
+}
+
+.join-main label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.join-main input[type="text"] {
+  font-size: 16px;
+  padding: 5px;
+  height: 40px;
+  width: 100%;
+}
+
+.join-main select {
+  font-size: 16px;
+  padding: 5px;
+  height: 40px;
+  width: 100%;
+}
+
+.join-main .btn {
+  margin-top: 20px;
+  width: 100%;
+  background-color: blue;
+  color: white;
+}
+
+/* Media Query for screens smaller than 768px */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .main,
+  .online-clients {
+    border-radius: 24px; /* Adjust border radius */
+    margin: 0px;
+    width: 100%;
+  }
+
+  .divOfLeftUser,
+  .divOfRightUser {
+    max-width: 75%;
+  }
+
+  .online-clients {
+    border-radius: 20px; /* Adjust border radius */
+    margin-top: 20px; /* Add some space between main and online clients */
+  }
+
+  .main {
+    margin: 0; /* Remove margin-bottom */
+    padding: 0;
+  }
+
+  .name {
+    font-size: 15px; /* Reduce font size */
+  }
+
+  .message-left,
+  .message-right {
+    max-width: calc(100% - 48px); /* Adjust max-width */
+    border-radius: 20px;
+    font-size: 15px;
+  }
+}
